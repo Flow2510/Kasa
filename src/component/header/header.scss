@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &__logo{
+        width: 100px;
+    }
+
+    &__list{
+        display: flex;
+        gap: 1rem;
+        list-style-type: none;
+    }
+}
