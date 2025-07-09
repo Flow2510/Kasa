@@ -8,9 +8,14 @@
         width: 100px;
     }
 
-    &__list{
+    &__nav{
         display: flex;
         gap: 1rem;
         list-style-type: none;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: inherit;
     }
 }
