@@ -1,4 +1,9 @@
+import DropDown from "../component/dropdown/Dropdown";
+
 function About() {
-  return <h1>À propos de Kasa</h1>;
+  return (
+    <DropDown />
+  )
 }
+
 export default About;
