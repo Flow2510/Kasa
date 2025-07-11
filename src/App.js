@@ -3,19 +3,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './component/header/Header';
 import Footer from './component/footer/Footer';
-import About from './pages/About';
-import Main from './component/main/Main';
+import About from './pages/about/About';
+import Main from './pages/main/Main';
+import Error from './pages/error/Error';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
-
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
-          
+          <Route path="*" element={<Error />} />
         </Routes>
 
         <Footer />

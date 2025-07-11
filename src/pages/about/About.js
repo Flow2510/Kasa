@@ -1,5 +1,5 @@
-import DropDown from "../component/dropdown/Dropdown";
-import Intro from "../component/intro/Intro";
+import DropDown from "../../component/dropdown/Dropdown";
+import Intro from "../../component/intro/Intro";
 import './about.scss';
 
 function About() {

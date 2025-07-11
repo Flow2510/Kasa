@@ -1,5 +1,5 @@
-import Article from '../article/Article';
-import Intro from '../intro/Intro';
+import Article from '../../component/article/Article';
+import Intro from '../../component/intro/Intro';
 import './main.scss';
 
 function Main() {

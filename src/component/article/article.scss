@@ -5,6 +5,7 @@
 
     &__image{
         width: 100%;
+        aspect-ratio: 1/0.7;
         display: block;
         object-fit: cover;
         border-radius: 0.5rem;
@@ -15,5 +16,6 @@
         bottom: 0.5rem;
         left: 0.5rem;
         color: white;
+        font-size: 1.3rem;
     }
 }
