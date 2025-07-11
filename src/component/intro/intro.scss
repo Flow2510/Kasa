@@ -1,0 +1,36 @@
+.intro{
+    border-radius: 0.5rem;
+    background: url(./4706e7dde270fc8fc902a1eb738458e7b29c1899.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 5;
+        border-radius: 0.5rem;
+    }
+
+    &__title{
+        z-index: 6;
+    }
+
+    &__title-br{
+        display: none;
+
+        @media screen and (max-width:800px) {     //  simule un retour a la ligne sur petits ecrans
+            display: block;
+        }
+    }
+}
