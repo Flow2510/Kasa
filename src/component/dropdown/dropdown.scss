@@ -1,5 +1,5 @@
 .dropDown{
-    color: white;
+    
 
     &__title-wrapper{
         display: flex;
@@ -8,7 +8,10 @@
         background-color: hsla(0, 100%, 69%, 1);
         margin-top: 1rem;
         padding: 0.5rem;
+        width: 100%;
+        border: none;
         border-radius: 0.25rem;
+        color: white;
     }
 
     &__title{
