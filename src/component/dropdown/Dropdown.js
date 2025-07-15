@@ -28,7 +28,7 @@ const aboutList = [
   },
 ];
 
-function DropDown() {
+function DropDownStatik() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleDropdown = (index) => {
@@ -57,4 +57,4 @@ function DropDown() {
   );
 }
 
-export default DropDown;
+export default DropDownStatik;

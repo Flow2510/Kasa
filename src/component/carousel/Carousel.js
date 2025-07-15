@@ -15,9 +15,9 @@ export function Carousel({pictures}){                           // reçoit un ta
     return(
         <div className="carousel">
             <img className='carousel__image' src={pictures[index]} alt={`${index + 1}`} />
-            <div className="carousel__arrow">
-                <button onClick={prev} className="carousel__arrow carousel__arrow-left">left</button>
-                <button onClick={next} className="carousel__arrow carousel__arrow-right">right</button>
+            <div className="carousel__arrow-wrapper">
+                <button onClick={prev} className="carousel__arrow carousel__arrow-left">&lt;</button>
+                <button onClick={next} className="carousel__arrow carousel__arrow-right">&gt;</button>
             </div>
         </div>
     )

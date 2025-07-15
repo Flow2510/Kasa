@@ -1,0 +1,34 @@
+.logement{
+
+    &__rating{
+        display: flex;
+    }
+
+    &__profil-wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__profil{
+        display: flex;
+        
+    }
+
+    &__profil-name{
+        padding-right: 0.5rem;
+        text-align: right;
+        max-width: 80px;
+    }
+
+    &__profil-image{
+        border-radius: 9999px;
+        width: 40px;
+    }
+
+    &__tags-wrapper{
+        display: flex;
+        gap: 0.5rem;
+    }
+}
