@@ -1,5 +1,9 @@
+import HomeIntro from "../components/introhome/homeintro";
+
 export default function Home(){
     return(
-        <h1>Accueil</h1>
+        <main>
+            <HomeIntro />
+        </main>
     )
 }

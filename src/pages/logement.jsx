@@ -1,5 +1,5 @@
 export default function Logement(){
     return(
-        <h1>Logment</h1>
+        <h1>Logement</h1>
     )
 }
