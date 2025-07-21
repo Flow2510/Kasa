@@ -1,0 +1,14 @@
+.gallery{
+
+
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        background-color: hsla(0, 0%, 97%, 1);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+}

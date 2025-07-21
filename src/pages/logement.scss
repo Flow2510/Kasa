@@ -1,9 +1,5 @@
 .logement{
 
-    &__image{
-       width: 100%;
-    }
-
     &__content{
         
         &-title{
@@ -49,5 +45,15 @@
             border-radius: 99999px;
             width: 40px;
         }
+    }
+
+    &__description{
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    &__list{
+        list-style-type: none;
     }
 }

@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     height: 120px;
+        
+    @media screen and (min-width: 600px) {
+        justify-content: center;
+    }
 
     &__overlay{
         width: 100%;
@@ -27,7 +31,7 @@
 
         &-break{
 
-            @media screen and (min-width:500px) {
+            @media screen and (min-width:600px) {
                 display: none;
             }
         }

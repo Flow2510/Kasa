@@ -1,5 +1,6 @@
 import logements from "../../data/logements.json";
 import Card from "../card/card";
+import './gallery.scss'
 
 export default function Gallery(){
     return(

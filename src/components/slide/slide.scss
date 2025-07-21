@@ -8,6 +8,11 @@
         aspect-ratio: 1 / 0.6;
         object-fit: cover;
         border-radius: 0.5rem;
+
+        @media screen and (min-width: 600px) {
+            height: 450px;
+            aspect-ratio: 1;
+        }
     }
 
     &__index{
@@ -23,7 +28,7 @@
         justify-content: space-between;
         position: absolute;
         width: 100%;
-       
+        padding: 0 0.5rem;
     }
 
     &__arrow{
