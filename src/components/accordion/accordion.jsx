@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './accordion.scss';
 
 export default function Accordion({title, children}){
     const [isOpen, setIsOpen] = useState(false);
@@ -8,13 +9,13 @@ export default function Accordion({title, children}){
     };
 
     return (
-        <div>
-            <button onClick={toggle}>
+        <div className="accordion">
+            <button className="accordion__button" onClick={toggle}>
                 <span>{title}</span>
-                <span>{isOpen ? '-' : '+'}</span>
+                 <span>{isOpen ? '-' : '+'}</span>  {/* condition ? siVrai : siFaux */}
             </button>
             {isOpen && (
-                <div>
+                <div className="accordion__content">
                     {children}
                 </div>
             )}

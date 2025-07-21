@@ -1,3 +1,4 @@
+import Accordion from "../components/accordion/accordion";
 import logements from "../data/logements.json";
 import './logement.scss';
 
@@ -22,8 +23,16 @@ export default function Logement(){
                         <img className="logement__profil-image" src={logements[0].host.picture} alt={logements[0].host.name} />
                     </div>
                 </div>
-                <span>mettre accordion </span>
-                <span>mettre accordion</span>
+                <div className="logement__description">
+                    <Accordion className="logement__accordion" title='description'>{logements[0].description}</Accordion>
+                    <Accordion className="logement__accordion" title='equipements'>
+                        <ul className="logement__list">
+                            {logements[0].equipments.map((equipment) => (
+                                <li className="logement__list-li" key={equipment}>{equipment}</li>
+                            ))}
+                        </ul>
+                    </Accordion>
+                </div>
             </section>
         </main>
     )

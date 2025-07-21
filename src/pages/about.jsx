@@ -26,7 +26,7 @@ export default function About(){
     return(
         <main className="main">
             {aboutList.map((item) => (
-                <Accordion title={item.title}>{item.content}</Accordion>
+                <Accordion key={item.title} title={item.title}>{item.content}</Accordion>
             ))}
         </main>
     )
