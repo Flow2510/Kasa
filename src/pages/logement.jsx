@@ -37,9 +37,9 @@ export default function Logement(){
                 <div className="logement__content">
                     <h1 className="logement__content-title">{logement.title}</h1>
                     <h3 className="logement__content-location">{logement.location}</h3>
-                    {logement.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                    ))}
+                        {logement.tags.map((tag) => (
+                            <span className="logement__content-tag" key={tag}>{tag}</span>
+                        ))}
                 </div>
                 <div className="logement__profil-wrapper">
                     <div className="logement__rating">
@@ -55,8 +55,8 @@ export default function Logement(){
                     </div>
                 </div>
                 <div className="logement__description">
-                    <Accordion className="logement__accordion" title='description'>{logement.description}</Accordion>
-                    <Accordion className="logement__accordion" title='equipements'>
+                    <Accordion className="logement__accordion" title='Description'>{logement.description}</Accordion>
+                    <Accordion className="logement__accordion" title='Equipements'>
                         <ul className="logement__list">
                             {logement.equipments.map((equipment) => (
                                 <li className="logement__list-li" key={equipment}>{equipment}</li>
