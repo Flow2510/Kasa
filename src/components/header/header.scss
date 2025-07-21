@@ -7,11 +7,19 @@
     max-width: 1240px;
     margin: 0 auto;
 
+    @media screen and (min-width: 600px) {
+        padding: 2rem 1rem;
+    }
+
+    @media screen and (min-width: 1240px) {
+        padding: 2rem 0;
+    }    
+
     &__logo{
         width: 80px;
 
         @media screen and (min-width: 600px) {
-            width: 100px;
+            width: 210px;
         }
     }
 
@@ -21,6 +29,7 @@
 
         @media screen and (min-width: 600px) {
             gap: 2rem;
+            font-size: 1.5rem;
         }
 
         &-link{

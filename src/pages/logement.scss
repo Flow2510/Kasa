@@ -2,6 +2,10 @@
 
     &__content{
         
+    @media screen and (min-width: 600px) {
+        margin-top: 1rem;
+    }
+
         &-title{
             color: hsl(0, 100%, 69%);
             padding-top: 0.5rem;

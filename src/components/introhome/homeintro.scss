@@ -7,14 +7,19 @@
         
     @media screen and (min-width: 600px) {
         justify-content: center;
+        height: 220px;
     }
 
     &__overlay{
         width: 100%;
         position: absolute;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.5);
         border-radius: 0.5rem;
+
+        @media screen and (min-width: 600px) {
+            height: 220px;
+        }
     }
 
     &__background{
@@ -22,12 +27,20 @@
         height: 120px;
         object-fit: cover;
         border-radius: 0.5rem;
+    
+        @media screen and (min-width: 600px) {
+            height: 220px;
+        }
     }
 
     &__title{
         color: white;
         position: absolute;
         padding-left: 0.5rem;
+
+        @media screen and (min-width:600px) {
+            font-size: 3rem;
+        }
 
         &-break{
 
