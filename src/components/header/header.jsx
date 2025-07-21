@@ -5,7 +5,7 @@ import './header.scss';
 export default function Header(){
     return(
         <header className='header'>
-            <Link><img className='header__logo' src={logo} alt='kasa'/></Link>
+            <Link to="/"><img className='header__logo' src={logo} alt='kasa'/></Link>
             <nav className='header__menu'>
                 <Link to="/" className='header__menu-link'>Accueil</Link>
                 <Link to="/about" className='header__menu-link'>A Propos</Link>
