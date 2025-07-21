@@ -3,14 +3,13 @@ import Slide from "../components/slide/slide";
 import logements from "../data/logements.json";
 import './logement.scss';
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 export default function Logement(){
     const { id } = useParams();
-    const logement = logements.find((logement) => logement.id === id);
-    const pictures = logement.pictures;
-    const [index, setIndex] = useState(0);    
 
+    const logement = logements.find((logement) => logement.id === id);
+    const [index, setIndex] = useState(0);    
     const nextSlide = () => {
         setIndex((prev) => (prev + 1) % pictures.length);
     };
@@ -19,7 +18,11 @@ export default function Logement(){
         setIndex((prev) => (prev === 0) ? pictures.length - 1 : prev - 1);
     };
 
+    if (!logement) {
+        return <Navigate to="/error" />;
+    }
 
+    const pictures = logement.pictures;
 
     return(
         <main className="main">
@@ -40,7 +43,11 @@ export default function Logement(){
                 </div>
                 <div className="logement__profil-wrapper">
                     <div className="logement__rating">
-                        <p>★★★★★</p>
+                        {logement.rating === "1" && <p>★☆☆☆☆</p>}
+                        {logement.rating === "2" && <p>★★☆☆☆</p>}
+                        {logement.rating === "3" && <p>★★★☆☆</p>}
+                        {logement.rating === "4" && <p>★★★★☆</p>}
+                        {logement.rating === "5" && <p>★★★★★</p>}
                     </div>
                     <div className="logement__profil">
                         <p className="logement__profil-name">{logement.host.name}</p>

@@ -1,4 +1,7 @@
 import Accordion from "../components/accordion/accordion";
+import bannerImage from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
+import './about.scss';
+
 const aboutList = [
     {
         title: 'Fiabilité',
@@ -25,9 +28,15 @@ const aboutList = [
 export default function About(){
     return(
         <main className="main">
-            {aboutList.map((item) => (
-                <Accordion key={item.title} title={item.title}>{item.content}</Accordion>
-            ))}
+            <section className="about__banner">
+                <img className="about__banner-image" src={bannerImage} alt="" />
+                <div className="about__banner-overlay"></div>
+            </section>
+            <section className="about">
+                {aboutList.map((item) => (
+                    <Accordion key={item.title} title={item.title}>{item.content}</Accordion>
+                ))}
+            </section>
         </main>
     )
 }

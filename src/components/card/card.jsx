@@ -3,7 +3,7 @@ import './card.scss'
 
 export default function Card({ logement }) {
     return(
-        <Link to={`/logement/${logement.id}`} onClick={() => (console.log(logement.id))}>
+        <Link to={`/logement/${logement.id}`}>
             <article className="card">
                 <img className="card__image" src={logement.cover} alt={logement.description} />
                 <h2 className="card__title" >{ logement.title }</h2>

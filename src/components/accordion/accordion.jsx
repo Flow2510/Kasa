@@ -11,8 +11,8 @@ export default function Accordion({title, children}){
     return (
         <div className="accordion">
             <button className="accordion__button" onClick={toggle}>
-                <span>{title}</span>
-                 <span>{isOpen ? '-' : '+'}</span>  {/* condition ? siVrai : siFaux */}
+                <span className="accordion__title">{title}</span>
+                 <span className="accordion__icon">{isOpen ? '-' : '+'}</span>  {/* condition ? siVrai : siFaux */}
             </button>
             {isOpen && (
                 <div className="accordion__content">
