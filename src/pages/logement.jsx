@@ -1,12 +1,31 @@
 import Accordion from "../components/accordion/accordion";
+import Slide from "../components/slide/slide";
 import logements from "../data/logements.json";
 import './logement.scss';
+import { useState } from "react";
 
 export default function Logement(){
+    const pictures = logements[0].pictures;
+    const [index, setIndex] = useState(0);    
+
+    const nextSlide = () => {
+        setIndex((prev) => (prev + 1))
+    };
+
+    const previousSlide = () => {
+        setIndex((prev) => (prev - 1))
+    };
+
     return(
         <main className="main">
             <section className="logement">
-                <img className="logement__image" src={ logements[0].pictures[0]} alt="logement" /> 
+                <Slide 
+                    source={pictures[index]}
+                    indexTotal={logements[0].pictures.length}
+                    currentIndex={index + 1}
+                    onNext={nextSlide}
+                    onPrev={previousSlide}
+                />
                 <div className="logement__content">
                     <h1 className="logement__content-title">{logements[0].title}</h1>
                     <h3 className="logement__content-location">{logements[0].location}</h3>
