@@ -9,11 +9,11 @@ export default function Logement(){
     const [index, setIndex] = useState(0);    
 
     const nextSlide = () => {
-        setIndex((prev) => (prev + 1))
+        setIndex((prev) => (prev + 1) % pictures.length);
     };
 
     const previousSlide = () => {
-        setIndex((prev) => (prev - 1))
+        setIndex((prev) => (prev === 0) ? pictures.length - 1 : prev - 1);
     };
 
     return(
