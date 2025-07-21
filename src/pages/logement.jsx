@@ -3,9 +3,12 @@ import Slide from "../components/slide/slide";
 import logements from "../data/logements.json";
 import './logement.scss';
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Logement(){
-    const pictures = logements[0].pictures;
+    const { id } = useParams();
+    const logement = logements.find((logement) => logement.id === id);
+    const pictures = logement.pictures;
     const [index, setIndex] = useState(0);    
 
     const nextSlide = () => {
@@ -16,20 +19,22 @@ export default function Logement(){
         setIndex((prev) => (prev === 0) ? pictures.length - 1 : prev - 1);
     };
 
+
+
     return(
         <main className="main">
             <section className="logement">
                 <Slide 
                     source={pictures[index]}
-                    indexTotal={logements[0].pictures.length}
+                    indexTotal={logement.pictures.length}
                     currentIndex={index + 1}
                     onNext={nextSlide}
                     onPrev={previousSlide}
                 />
                 <div className="logement__content">
-                    <h1 className="logement__content-title">{logements[0].title}</h1>
-                    <h3 className="logement__content-location">{logements[0].location}</h3>
-                    {logements[0].tags.map((tag) => (
+                    <h1 className="logement__content-title">{logement.title}</h1>
+                    <h3 className="logement__content-location">{logement.location}</h3>
+                    {logement.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
                     ))}
                 </div>
@@ -38,15 +43,15 @@ export default function Logement(){
                         <p>★★★★★</p>
                     </div>
                     <div className="logement__profil">
-                        <p className="logement__profil-name">{logements[0].host.name}</p>
-                        <img className="logement__profil-image" src={logements[0].host.picture} alt={logements[0].host.name} />
+                        <p className="logement__profil-name">{logement.host.name}</p>
+                        <img className="logement__profil-image" src={logement.host.picture} alt={logement.host.name} />
                     </div>
                 </div>
                 <div className="logement__description">
-                    <Accordion className="logement__accordion" title='description'>{logements[0].description}</Accordion>
+                    <Accordion className="logement__accordion" title='description'>{logement.description}</Accordion>
                     <Accordion className="logement__accordion" title='equipements'>
                         <ul className="logement__list">
-                            {logements[0].equipments.map((equipment) => (
+                            {logement.equipments.map((equipment) => (
                                 <li className="logement__list-li" key={equipment}>{equipment}</li>
                             ))}
                         </ul>
