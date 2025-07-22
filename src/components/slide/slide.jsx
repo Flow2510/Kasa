@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './slide.scss';
 
 export default function Slide({source, currentIndex, indexTotal, onPrev, onNext}){
@@ -16,3 +17,11 @@ export default function Slide({source, currentIndex, indexTotal, onPrev, onNext}
         </div>
     );
 }
+
+Slide.propTypes = {
+    onPrev: PropTypes.func,
+    onNext: PropTypes.func,
+    source: PropTypes.string.isRequired,
+    indexTotal: PropTypes.number.isRequired,
+    currentIndex: PropTypes.number.isRequired,
+};
