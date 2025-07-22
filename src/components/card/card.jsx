@@ -6,7 +6,7 @@ export default function Card({ logement }) {
         <Link className='card__link' to={`/logement/${logement.id}`}>
             <article className="card">
                 <img className="card__image" src={logement.cover} alt={logement.description} />
-                <h2 className="card__title" >{ logement.title }</h2>
+                <h4 className="card__title" >{ logement.title }</h4>
             </article>
         </Link>
     )
