@@ -36,8 +36,12 @@
             color: initial;
 
             &:hover{
-                color: hsla(0, 100%, 69%, 1);
+                text-decoration: underline;
             }
         }
     }
+}
+
+.active__link{
+    text-decoration: underline;
 }
