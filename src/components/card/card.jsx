@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import './card.scss'
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import './card.scss';
 
 export default function Card({ logement }) {
     return(
@@ -11,9 +11,9 @@ export default function Card({ logement }) {
             </article>
         </Link>
     )
-}
+};
 
-Card.PropTypes = {
+Card.propTypes= {
     logement: PropTypes.shape({
         id: PropTypes.string.isRequired,
         cover: PropTypes.string.isRequired,
