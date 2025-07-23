@@ -9,10 +9,14 @@
         &-title{
             color: hsl(0, 100%, 69%);
             padding-top: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         &-location{
             padding-top: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         &-tag{
@@ -22,6 +26,8 @@
             padding: 0.3rem 1.5rem;
             margin: 0.5rem 0.5rem 0 0;
             color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
         }
     }
 
@@ -38,8 +44,9 @@
 
         &-name{
             padding-right: 1rem;
+            font-weight: 500;
+            font-size: 0.75rem;
             text-align: right;
-            width: 100px;
             color: hsl(0, 100%, 69%);
         }
 
