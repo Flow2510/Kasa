@@ -8,15 +8,15 @@ export default function Slide({source, currentIndex, indexTotal, onPrev, onNext}
             {indexTotal > 1 && (
                 <>
                     <div className="slide__arrows">
-                        <button className="slide__arrow slide__arrow-left" onClick={onPrev}>←</button>
-                        <button className="slide__arrow slide__arrow-right" onClick={onNext}>→</button>
+                        <button className="slide__arrow slide__arrow-left" onClick={onPrev}><i className="fa-solid fa-chevron-left"></i></button>
+                        <button className="slide__arrow slide__arrow-right" onClick={onNext}><i className="fa-solid fa-chevron-right"></i></button>
                     </div>
                     <p className="slide__index">{currentIndex}/{indexTotal}</p>
                 </>
             )}
         </div>
     );
-}
+};
 
 Slide.propTypes = {
     onPrev: PropTypes.func,

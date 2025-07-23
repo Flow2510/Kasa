@@ -10,3 +10,15 @@
     min-height: 100vh;
     font-family: "montserrat", Arial, sans-serif;
 }
+
+@media screen and (min-width: 800px) {
+  html{
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html{
+    font-size: 22px;
+  }
+}

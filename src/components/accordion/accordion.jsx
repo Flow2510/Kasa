@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import './accordion.scss';
 
 export default function Accordion({title, children}){
@@ -12,7 +13,7 @@ export default function Accordion({title, children}){
         <div className="accordion">
             <button className="accordion__button" onClick={toggle}>
                 <span className="accordion__title">{title}</span>
-                 <span className="accordion__icon">{isOpen ? '-' : '+'}</span>  {/* condition ? siVrai : siFaux */}
+                {isOpen ? <i className="accordion__icon accordion__icon-down fa-solid fa-chevron-down"></i> : <i className="accordion__icon accordion__icon-up fa-solid fa-chevron-up"></i>} {/* condition ? siVrai : siFaux */}
             </button>
             {isOpen && (
                 <div className="accordion__content">
@@ -22,3 +23,8 @@ export default function Accordion({title, children}){
         </div>
     )
 }
+
+Accordion.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
+};

@@ -12,6 +12,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: hsla(0, 100%, 69%, 1);
         border: none;
         margin: 1rem 0;
@@ -24,5 +25,9 @@
         padding: 1rem;
         font-size: 0.8rem;
         font-weight: 500;
+    }
+
+    &__icon{
+        font-size: 0.9rem;
     }
 }
