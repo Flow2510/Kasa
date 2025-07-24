@@ -1,5 +1,14 @@
 .logement{
 
+    @media screen and (min-width:800px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .slide{
+            grid-column: 1 / span 2;
+        }
+    }
+
     &__content{
         
     @media screen and (min-width: 600px) {
@@ -35,7 +44,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 0.5rem;
+        margin: 0.5rem 0;
+      
+        @media screen and (min-width:800px) {
+            flex-direction: column-reverse;
+            align-items: end;
+            padding-top: 1rem;
+        }
     }
 
     &__profil{
@@ -60,9 +75,26 @@
         display: flex;
         gap: 2rem;
         width: 100%;
+        margin: 1rem 0;
+
+        
+        @media screen and (min-width:800px) {
+            grid-column: 1 / span 2;
+        }
     }
 
     &__list{
         list-style-type: none;
+    }
+
+    &__rating{
+
+        &-star{
+            color: rgb(170, 170, 170);
+
+            &--selected{
+                color: hsl(0, 100%, 69%);
+            }
+        }
     }
 }

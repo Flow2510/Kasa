@@ -15,11 +15,9 @@ export default function Accordion({title, children}){
                 <span className="accordion__title">{title}</span>
                 {isOpen ? <i className="accordion__icon accordion__icon-down fa-solid fa-chevron-down"></i> : <i className="accordion__icon accordion__icon-up fa-solid fa-chevron-up"></i>} {/* condition ? siVrai : siFaux */}
             </button>
-            {isOpen && (
-                <div className="accordion__content">
-                    {children}
-                </div>
-            )}
+            <div className={`accordion__content ${isOpen ? 'accordion__content--open' : ''}`}>
+                <div className="accordion__text">{children}</div>
+            </div>
         </div>
     )
 }

@@ -43,14 +43,17 @@ export default function Logement(){
                 </div>
                 <div className="logement__profil-wrapper">
                     <div className="logement__rating">
-                        {logement.rating === "1" && <p>★☆☆☆☆</p>}
-                        {logement.rating === "2" && <p>★★☆☆☆</p>}
-                        {logement.rating === "3" && <p>★★★☆☆</p>}
-                        {logement.rating === "4" && <p>★★★★☆</p>}
-                        {logement.rating === "5" && <p>★★★★★</p>}
+                        {logement.rating === "1" && <p><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i></p>}
+                        {logement.rating === "2" && <p><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i></p>}
+                        {logement.rating === "3" && <p><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star"></i><i className="fa-solid fa-star logement__rating-star"></i></p>}
+                        {logement.rating === "4" && <p><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"><i className="fa-solid fa-star logement__rating-star--selected"></i></i><i className="fa-solid fa-star logement__rating-star"></i></p>}
+                        {logement.rating === "5" && <p><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i><i className="fa-solid fa-star logement__rating-star--selected"></i></p>}
                     </div>
                     <div className="logement__profil">
-                        <p className="logement__profil-name">{logement.host.name}</p>
+                        <p className="logement__profil-name">
+                            {logement.host.name.split(" ")[0]}<br />
+                            {logement.host.name.split(" ")[1]}
+                        </p>
                         <img className="logement__profil-image" src={logement.host.picture} alt={logement.host.name} />
                     </div>
                 </div>

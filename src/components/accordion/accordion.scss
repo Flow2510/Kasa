@@ -2,6 +2,7 @@
     background: hsla(0, 0%, 97%, 1);
     border-radius: 0.5rem;
     width: 100%;
+    height: fit-content;
 
     &__title{
         font-size: 0.8rem;
@@ -15,16 +16,25 @@
         align-items: center;
         background-color: hsla(0, 100%, 69%, 1);
         border: none;
-        margin: 1rem 0;
         padding: 0.5rem;
         color: white;
         border-radius: 0.4rem;
     }
 
-    &__content{
-        padding: 1rem;
+    &__content{    
         font-size: 0.8rem;
         font-weight: 500;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    &__content--open{
+        max-height: 500px;
+    }
+
+    &__text{
+        padding: 1rem;
     }
 
     &__icon{
