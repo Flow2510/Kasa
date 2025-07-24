@@ -58,7 +58,7 @@
         align-items: center;
 
         &-name{
-            padding-right: 1rem;
+            padding-right: 0.5rem;
             font-weight: 500;
             font-size: 0.75rem;
             text-align: right;
@@ -68,6 +68,10 @@
         &-image{
             border-radius: 99999px;
             width: 40px;
+
+            @media screen and (min-width:800px) {
+                width: 50px;
+            }
         }
     }
 
