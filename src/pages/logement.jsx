@@ -11,11 +11,11 @@ export default function Logement(){
     const logement = logements.find((logement) => logement.id === id);
     const [index, setIndex] = useState(0);    
     const nextSlide = () => {
-        setIndex((prev) => (prev + 1) % pictures.length);
+        setIndex((index) => (index + 1) % pictures.length);
     };
 
     const previousSlide = () => {
-        setIndex((prev) => (prev === 0) ? pictures.length - 1 : prev - 1);
+        setIndex((index) => (index === 0) ? pictures.length - 1 : index - 1);
     };
 
     if (!logement) {
