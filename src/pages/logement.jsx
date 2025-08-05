@@ -36,7 +36,7 @@ export default function Logement(){
                 />
                 <div className="logement__content">
                     <h1 className="logement__content-title">{logement.title}</h1>
-                    <h3 className="logement__content-location">{logement.location}</h3>
+                    <h2 className="logement__content-location">{logement.location}</h2>
                         {logement.tags.map((tag) => (
                             <span className="logement__content-tag" key={tag}>{tag}</span>
                         ))}
