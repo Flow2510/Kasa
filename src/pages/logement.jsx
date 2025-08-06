@@ -33,6 +33,7 @@ export default function Logement(){
                     currentIndex={index + 1}
                     onNext={nextSlide}
                     onPrev={previousSlide}
+                    alt={logement.title + " de " + logement.host.name}
                 />
                 <div className="logement__content">
                     <h1 className="logement__content-title">{logement.title}</h1>

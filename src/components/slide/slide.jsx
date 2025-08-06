@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import './slide.scss';
 
-export default function Slide({source, currentIndex, indexTotal, onPrev, onNext}){
+export default function Slide({source, currentIndex, indexTotal, onPrev, onNext, alt}){
     return (
         <div className="slide">
-            <img className="slide__image" src={source} alt="logement" />
+            <img className="slide__image" src={source} alt={alt} />
             {indexTotal > 1 && (
                 <>
                     <div className="slide__arrows">
@@ -24,4 +24,5 @@ Slide.propTypes = {
     source: PropTypes.string.isRequired,
     indexTotal: PropTypes.number.isRequired,
     currentIndex: PropTypes.number.isRequired,
+    alt: PropTypes.string.isRequired
 };

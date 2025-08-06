@@ -7,7 +7,7 @@ export default function Card({ logement }) {
         <Link className='card__link' to={`/logement/${logement.id}`}>
             <article className="card">
                 <div className='card__layout'></div>
-                <img className="card__image" src={logement.cover} alt={logement.title} />
+                <img className="card__image" src={logement.cover} alt={logement.title + " de " + logement.host.name} />
                 <h4 className="card__title" >{ logement.title }</h4>
             </article>
         </Link>
@@ -20,5 +20,6 @@ Card.propTypes= {
         cover: PropTypes.string.isRequired,
         description: PropTypes.string,
         title: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired
     }).isRequired,
 };
