@@ -18,8 +18,10 @@ Card.propTypes= {
     logement: PropTypes.shape({
         id: PropTypes.string.isRequired,
         cover: PropTypes.string.isRequired,
-        description: PropTypes.string,
+        description: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired
-    }).isRequired,
+        host: PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            }).isRequired,
+        }).isRequired,
 };
